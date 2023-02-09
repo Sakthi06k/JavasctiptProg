@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <script>
+        //empty an array by using two methods
+        var arr=[1,2,3,4,5];
+        // l=arr.length
+        // for(var j=0;j<l;j++){
+        //     arr.pop();
+        // }
+        arr=[]
+        console.log(arr);
+
+        //reverse the string
+        var str="my name is sakthivel";
+        var a=str.split(" ");
+        for(var i=0;i<a.length;i++){
+            var temp=a[i].split("").reverse().join("");
+            a[i]=temp;
+        }
+        // for(var i=0;i<a.length;i++){
+        //     a[i]=a[i].split("").reverse().join("");
+        // }
+        console.log(a.join(" "));
+
+        //fizzbuzz
+        for(var j=0;j<=100;j++){
+            if(j%3==0 && j%5==0)
+            console.log("fizzbuzz");
+            else if(j%3==0)
+            console.log("fizz");
+            else if(j%5==0)
+            console.log("buzz")
+        } 
+
+
+        //anagram program
+        var s1="Mary";
+        var s2="Army"
+        s1=s1.toLowerCase();
+        s2=s2.toLowerCase();
+        let str1 = [...s1]; // strArr = ["1", "2", "3", "4", "5"]
+        let str2= [...s2];
+        console.log(str2.sort());
+        console.log(str1.sort().join("")==str2.sort().join(""));
+
+        //enqueue and dequeue adding elements in front of the array and removing elements in back of array
+        var array=[1,2,3,4,5,6,7];
+        let len=array.length;
+        for(let a=0;a<3;a++){
+            array.pop()
+        }
+        console.log(array);
+
+        var inc=5
+        for(let a=0;a<3;a++){
+            array.unshift(inc++);
+        }
+        console.log(array);
+
+        //name validaion it will returns true or false
+var nn="H.Wells"
+  var ar1 = nn.split(".");
+//   const initialPattern = /^[A-Z]\.$/;
+//   const wordPattern = /^[A-Z][a-z]+$/;    This condition fails remaining condition will pass
+  let length=ar1.length;
+  function isLowerCase(str) {
+    return str === str.toLowerCase();
+}
+    if(length==1||ar1[0].length>1){
+        console.log("false");
+        
+    }
+    else if(isLowerCase(ar1[ar1.length-1].charAt(0))){
+        console.log("false");
+        
+    }
+    else if((ar1[0].length>=1 && isLowerCase(ar1[0]))){
+        console.log("false");
+       
+    }
+    else if((ar1[1].length!=1 || (ar1[1].length==1 && isLowerCase(ar1[1].charAt(0))))&&ar1.length>=3){
+        console.log("false");
+     
+    }
+    else{
+        console.log("true");
+    }
+
+     </script> 
+     
+</body>
+</html>
